@@ -1,9 +1,10 @@
 #include "Ball.h"
 #include <iostream>
+#include "Brick.h"
 
 using namespace std;
 
-void Ball::update(int paddleX, int paddleY, int brickX, int brickY) {
+void Ball::update(int paddleX, int paddleY, Brick allBricks[]) {
 
 	x += velX;
 	y += velY;
@@ -24,27 +25,49 @@ void Ball::update(int paddleX, int paddleY, int brickX, int brickY) {
 		velX = -velX;
 	}
 
+	int tempBrickX;
+	int tempBrickY;
+	bool brickDestroyed;
+
+	for (int i = 0; i < 10; i++) {
+		tempBrickX = allBricks[i].getX();
+		tempBrickY = allBricks[i].getY();
+		brickDestroyed = allBricks[i].getDestroyed();
+
+		//brick bounce (bottom part)
+		if (y <= tempBrickY + BRICK_HEIGHT && y >= tempBrickY + BRICK_HEIGHT / 2 && x >= tempBrickX + 1 && x <= tempBrickX + BRICK_WIDTH - 1 && brickDestroyed == false) {
+			//brick to take damage
+			velY = -velY;
+			cout << allBricks[i].getHealth();
+			allBricks[i].TakeDamage();
+		}
+
+		//brick bounce (top part)
+		if (y <= tempBrickY + BRICK_HEIGHT / 2 && y >= tempBrickY - BALL_SIZE && x >= tempBrickX + 1 && x <= tempBrickX + BRICK_WIDTH - 1 && brickDestroyed == false) {
+			//brick to take damage
+			velY = -velY;
+			allBricks[i].TakeDamage();
+		}
+
+		//brick bounce (left part)
+		if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX - BALL_SIZE && x <= tempBrickX + BRICK_WIDTH / 2 && brickDestroyed == false) {
+			//brick to take damage
+			velX = -velX;
+			allBricks[i].TakeDamage();
+		}
+
+		//brick bounce (right part)
+		if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX + BRICK_WIDTH / 2 && x <= tempBrickX + BRICK_WIDTH && brickDestroyed == false) {
+			//brick to take damage
+			velX = -velX;
+			allBricks[i].TakeDamage();
+		}
+
+	};
+
 	//paddle bounce
 	if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + PADDLE_WIDTH) {
 		velY = -velY;
-	}
-
-	//brick bounce (bottom part)
-	if (y <= brickY + BRICK_HEIGHT && y >= brickY + BRICK_HEIGHT / 2 && x >= brickX + 1 && x <= brickX + BRICK_WIDTH - 1) {
-		//brick to take damage
-		velY = -velY;
-	}
-
-	//brick bounce (top part)
-	if (y <= brickY + BRICK_HEIGHT / 2 && y >= brickY - BALL_SIZE && x >= brickX + 1 && x <= brickX + BRICK_WIDTH - 1) {
-		//brick to take damage
-		velY = -velY;
-	}
-
-	//brick bounce (left part) -- Fix ball size in this equation
-	if (y <= brickY + BRICK_HEIGHT - 1 && y >= brickY - 1 && x >= brickX && x <= brickX + BRICK_WIDTH / 2) {
-		//brick to take damage
-		velX = -velX;
 	}
 
 	//if (x <= PADDLE_WIDTH && y >= leftY && y <= leftY + PADDLE_HEIGHT) {

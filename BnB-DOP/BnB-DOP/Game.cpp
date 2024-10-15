@@ -1,6 +1,6 @@
 #include "Game.h"
 #include "SDL.h"
-
+#include <array>
 
 Game::Game() {
 	SDL_Init(SDL_INIT_VIDEO);
@@ -8,7 +8,12 @@ Game::Game() {
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	paddle = new Paddle(WINDOW_WIDTH / 2 - PADDLE_WIDTH / 2, WINDOW_HEIGHT - 20);
 	ball = new Ball(WINDOW_WIDTH / 2 - BALL_SIZE / 2, WINDOW_HEIGHT / 2 - BALL_SIZE / 2, BALL_SPEED, BALL_SPEED);
-	brick = new Brick(WINDOW_WIDTH / 2 - BRICK_WIDTH / 2, 200, 1, false);
+
+	//brick = new Brick(WINDOW_WIDTH / 2 - BRICK_WIDTH / 2, 100, 1, false);
+	for (int i = 1; i < 11; i++) {
+		bricks[i-1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
+	}
+
 };
 
 Game::~Game() {
@@ -22,7 +27,8 @@ void Game::Run() {
 
 	while (true) {
 		Input();
-		ball->update(paddle->getX(), paddle->getY(), brick->getX(), brick->getY());
+		ball->update(paddle->getX(), paddle->getY(), Game::bricks);
+		//ball->update(paddle->getX(), paddle->getY(), brick->getX(), brick->getY());
 		Render();
 
 	}
@@ -56,8 +62,23 @@ void Game::Render() {
 	SDL_Rect paddleRect = { paddle->getX(), paddle->getY(), PADDLE_WIDTH,PADDLE_HEIGHT };
 	SDL_RenderFillRect(renderer, &paddleRect);
 
-	SDL_Rect brickRect = { brick->getX(), brick->getY(), BRICK_WIDTH,BRICK_HEIGHT };
-	SDL_RenderFillRect(renderer, &brickRect);
+	//SDL_Rect brickRect = { brick->getX(), brick->getY(), BRICK_WIDTH,BRICK_HEIGHT };
+	//SDL_RenderFillRect(renderer, &brickRect);
+
+	for (int i = 0; i < 10; i++) {
+		if (bricks[i].getDestroyed() == false) {
+			if (bricks[i].getHealth() == 2) {
+				SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+				SDL_Rect brickRect = { bricks[i].getX(), bricks[i].getY(), BRICK_WIDTH,BRICK_HEIGHT };
+				SDL_RenderFillRect(renderer, &brickRect);
+			}
+			else {
+				SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+				SDL_Rect brickRect = { bricks[i].getX(), bricks[i].getY(), BRICK_WIDTH,BRICK_HEIGHT };
+				SDL_RenderFillRect(renderer, &brickRect);
+			};
+		}
+	};
 
 	SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
 	SDL_Rect ballRect = { ball->getX(), ball->getY(), BALL_SIZE, BALL_SIZE };

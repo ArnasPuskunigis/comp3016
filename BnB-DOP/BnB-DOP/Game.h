@@ -19,5 +19,6 @@ private:
 	Paddle* paddle;
 	Ball* ball;
 	Brick* brick;
+	Brick bricks[10];
 };
 
