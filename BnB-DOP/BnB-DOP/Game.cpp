@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "SDL.h"
 #include <array>
+#include <iostream>
 
 Game::Game() {
 	SDL_Init(SDL_INIT_VIDEO);
@@ -87,7 +88,7 @@ void Game::Render() {
 
 
 	SDL_RenderPresent(renderer);
-	SDL_Delay(25);
+	SDL_Delay(5);
 };
 
 

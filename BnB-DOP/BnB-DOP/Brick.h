@@ -4,7 +4,7 @@
 class Brick
 {
 public:
-	Brick(int x, int y, int health, bool destroyed) : x(x), y(y), health(1), destroyed(false) {};
+	Brick(int x, int y, int health, bool destroyed) : x(x), y(y), health(health), destroyed(false) {};
 	Brick() = default;
 	void TakeDamage();
 	int getX() const { return x; }
