@@ -18,7 +18,14 @@ private:
 	SDL_Renderer* renderer;
 	Paddle* paddle;
 	Ball* ball;
+	Ball* ball2;
 	Brick* brick;
 	Brick bricks[10];
+	Ball balls[12];
+	int diceValue;
+	int ballCount;
+	// Game states: 1 = Main | 2 = Class select | 3 = Dice roll | 4 = Level 1 | 5 = Level complete | 6 = Level 2 |
+	int gameState;
+	
 };
 

@@ -19,6 +19,7 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[]) {
 	if (y >= WINDOW_HEIGHT - BALL_SIZE) {
 		velY = -velY;
 		cout << "game over";
+		destroyBall();
 		exit;
 	}
 
