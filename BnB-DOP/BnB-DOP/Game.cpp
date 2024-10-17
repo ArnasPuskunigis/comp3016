@@ -6,60 +6,54 @@
 #include <SDL_image.h>
 
 Game::Game() {
+	gameState = 2;
+
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow("Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	
+	paddle = new Paddle(WINDOW_WIDTH / 2 - PADDLE_WIDTH / 2, WINDOW_HEIGHT - 20);
+	//ball = new Ball(WINDOW_WIDTH / 2 - BALL_SIZE / 2, WINDOW_HEIGHT / 2 - BALL_SIZE / 2, BALL_SPEED, BALL_SPEED, false);
+	//ball2 = new Ball(50, 500, BALL_SPEED, BALL_SPEED, false);
+	diceValue = rand() % 12 + 1;
+	ballCount = diceValue;
 
-	gameState = 1;
+	std::random_device myRandomDevice;
+	std::mt19937 eng(myRandomDevice());
+	std::uniform_int_distribution<> distr(WINDOW_WIDTH / 3, WINDOW_WIDTH - WINDOW_WIDTH / 3);
 
-	if (gameState == 1){
-		paddle = new Paddle(WINDOW_WIDTH / 2 - PADDLE_WIDTH / 2, WINDOW_HEIGHT - 20);
-		//ball = new Ball(WINDOW_WIDTH / 2 - BALL_SIZE / 2, WINDOW_HEIGHT / 2 - BALL_SIZE / 2, BALL_SPEED, BALL_SPEED, false);
-		//ball2 = new Ball(50, 500, BALL_SPEED, BALL_SPEED, false);
-		diceValue = rand() % 12 + 1;
-		ballCount = diceValue;
+	std::random_device myRandomDevice2;
+	std::mt19937 eng2(myRandomDevice2());
+	std::uniform_int_distribution<> distr2(1, 4);
 
-		std::random_device myRandomDevice;
-		std::mt19937 eng(myRandomDevice());
-		std::uniform_int_distribution<> distr(WINDOW_WIDTH / 3, WINDOW_WIDTH - WINDOW_WIDTH / 3);
+	int random_number_X;
+	int random_number_Y;
+	int randomMinus;
 
-		std::random_device myRandomDevice2;
-		std::mt19937 eng2(myRandomDevice2());
-		std::uniform_int_distribution<> distr2(1, 4);
-
-		int random_number_X;
-		int random_number_Y;
-		int randomMinus;
-
-		for (int i = 1; i < 11; i++) {
-			bricks[i - 1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
-		}
-
-		//brick = new Brick(WINDOW_WIDTH / 2 - BRICK_WIDTH / 2, 100, 1, false);
-		for (int i = 0; i < ballCount; i++) {
-			random_number_X = distr(eng);
-			random_number_Y = distr(eng);
-			randomMinus = distr2(eng2);
-
-			if (randomMinus == 1) {
-				balls[i] = Ball(random_number_X, random_number_Y, -BALL_SPEED, -BALL_SPEED, false);
-
-			}
-			else if (randomMinus == 2) {
-				balls[i] = Ball(random_number_X, random_number_Y, BALL_SPEED, -BALL_SPEED, false);
-			}
-			else if (randomMinus == 3) {
-				balls[i] = Ball(random_number_X, random_number_Y, -BALL_SPEED, BALL_SPEED, false);
-			}
-			else {
-				balls[i] = Ball(random_number_X, random_number_Y, BALL_SPEED, BALL_SPEED, false);
-			}
-		}
+	for (int i = 1; i < 11; i++) {
+		bricks[i - 1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
 	}
 
-	
+	//brick = new Brick(WINDOW_WIDTH / 2 - BRICK_WIDTH / 2, 100, 1, false);
+	for (int i = 0; i < ballCount; i++) {
+		random_number_X = distr(eng);
+		random_number_Y = distr(eng);
+		randomMinus = distr2(eng2);
 
+		if (randomMinus == 1) {
+			balls[i] = Ball(random_number_X, random_number_Y, -BALL_SPEED, -BALL_SPEED, false);
+
+		}
+		else if (randomMinus == 2) {
+			balls[i] = Ball(random_number_X, random_number_Y, BALL_SPEED, -BALL_SPEED, false);
+		}
+		else if (randomMinus == 3) {
+			balls[i] = Ball(random_number_X, random_number_Y, -BALL_SPEED, BALL_SPEED, false);
+		}
+		else {
+			balls[i] = Ball(random_number_X, random_number_Y, BALL_SPEED, BALL_SPEED, false);
+		};
+	};
 };
 
 Game::~Game() {
@@ -181,16 +175,104 @@ void Game::Render() {
 
 	}
 	else if (gameState == 2) {
-		SDL_Texture* spriteTexture = IMG_LoadTexture(renderer, "path/to/your/sprite.png");
-		if (!spriteTexture) {
-			std::cerr << "Failed to load texture! IMG_Error: " << IMG_GetError() << std::endl;
-			IMG_Quit();
+		// Load an image
+		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/sprite.png"); // Use your actual image path here
+
+			if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+				std::cerr << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
+				exit;
+			}
+
+			// Initialize SDL_image
+			if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+				std::cerr << "SDL_image could not initialize! IMG_Error: " << IMG_GetError() << std::endl;
+				SDL_Quit();
+				exit;
+			}
+
+			// Create a window
+			SDL_Window* window = SDL_CreateWindow("Load Image Example", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0);
+			if (!window) {
+				std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			// Create a renderer
+			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+			if (!renderer) {
+				std::cerr << "Renderer could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			// Load an image from the specified path
+			if (!surface) {
+				std::cerr << "Unable to load image! IMG_Error: " << IMG_GetError() << std::endl;
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			// Create a texture from the surface
+			SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+			SDL_FreeSurface(surface); // Free the surface as we no longer need it
+
+			if (!texture) {
+				std::cerr << "Unable to create texture! SDL_Error: " << SDL_GetError() << std::endl;
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			// Main loop
+			bool running = true;
+			SDL_Event event;
+			while (running) {
+				while (SDL_PollEvent(&event)) {
+					if (event.type == SDL_QUIT) {
+						running = false;
+					}
+				}
+
+				// Clear the screen
+				SDL_RenderClear(renderer);
+
+				// Render the texture
+				SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+				// Present the renderer
+				SDL_RenderPresent(renderer);
+			}
+
+			// Clean up
+			SDL_DestroyTexture(texture);
 			SDL_DestroyRenderer(renderer);
 			SDL_DestroyWindow(window);
+			IMG_Quit();
 			SDL_Quit();
-			return 1;
+
+			exit;
 		}
-	}
+
+		//SDL_Texture* spriteTexture = NULL;
+		//if (spriteTexture == NULL) {
+		//	spriteTexture = IMG_LoadTexture(renderer, "C:/Users/apuskunigis/Downloads/sprite.png");
+		//}
+		//if (!spriteTexture) {
+		//	std::cerr << "Failed to load texture! IMG_Error: " << IMG_GetError() << std::endl;
+		//}
+		//else {
+		//	SDL_RenderCopy(renderer, spriteTexture, nullptr, nullptr); // Render at the default position
+
+		//}
 
 	
 };
