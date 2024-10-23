@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\apuskunigis\Desktop\SDL2_image-2.8.2\x86_64-w64-mingw32\lib;C:\Users\apuskunigis\Desktop\SDL2-2.30.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Arnas\Desktop\SDL2-2.30.8\lib\x64;C:\Users\apuskunigis\Desktop\SDL2_image-2.8.2\x86_64-w64-mingw32\lib;C:\Users\apuskunigis\Desktop\SDL2-2.30.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

@@ -6,7 +6,7 @@
 #include <SDL_image.h>
 
 Game::Game() {
-	gameState = 2;
+	gameState = 1;
 
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow("Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
