@@ -6,7 +6,7 @@
 #include <SDL_image.h>
 
 Game::Game() {
-	gameState = 1;
+	gameState = 2;
 
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow("Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
@@ -117,6 +117,12 @@ void Game::Input() {
 				}
 			}
 		}
+		else if (gameState == 2) {
+			if (state[SDL_SCANCODE_X]) {
+				SDL_Quit();
+				exit(0);
+			}
+		}
 
 
 
@@ -176,7 +182,7 @@ void Game::Render() {
 	}
 	else if (gameState == 2) {
 		// Load an image
-		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/sprite.png"); // Use your actual image path here
+		SDL_Surface* surface = IMG_Load("C:/Users/Arnas/Downloads/Bnb.png");
 
 			if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 				std::cerr << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
@@ -191,7 +197,7 @@ void Game::Render() {
 			}
 
 			// Create a window
-			SDL_Window* window = SDL_CreateWindow("Load Image Example", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0);
+			SDL_Window* window = SDL_CreateWindow("Main Menu", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH, WINDOW_HEIGHT, 0);
 			if (!window) {
 				std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
 				IMG_Quit();
@@ -251,6 +257,9 @@ void Game::Render() {
 				// Present the renderer
 				SDL_RenderPresent(renderer);
 			}
+
+			/*SDL_RenderPresent(renderer);
+			SDL_Delay(5);*/
 
 			// Clean up
 			SDL_DestroyTexture(texture);
