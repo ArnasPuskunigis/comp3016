@@ -10,8 +10,15 @@ public:
 	Game();
 	~Game();
 	void Run();
+	bool init;
+	bool ballsInit;
+	int characterClass;
+	int die1;
+	int die2;
 
 private:
+	void GenerateDice();
+	void GenerateBalls();
 	void Input();
 	void Render();
 	SDL_Window* window;
@@ -21,7 +28,7 @@ private:
 	Ball* ball2;
 	Brick* brick;
 	Brick bricks[10];
-	Ball balls[12];
+	Ball balls[11];
 	int diceValue;
 	int ballCount;
 	// Game states: 1 = Main | 2 = Class select | 3 = Dice roll | 4 = Level 1 | 5 = Level complete | 6 = Level 2 |
