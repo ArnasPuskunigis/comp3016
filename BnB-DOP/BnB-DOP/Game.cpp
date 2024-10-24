@@ -9,7 +9,7 @@ Game::Game() {
 	gameState = 1;
 	init = false;
 	ballsInit = false;
-	if (gameState == 1) {
+	/*if (gameState == 1) {
 		init = true;
 		SDL_Init(SDL_INIT_VIDEO);
 		window = SDL_CreateWindow("Pong Main Menu", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
@@ -32,7 +32,7 @@ Game::Game() {
 		SDL_Init(SDL_INIT_VIDEO);
 		window = SDL_CreateWindow("Pong Game Over", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-	}
+	}*/
 
 	paddle = new Paddle(WINDOW_WIDTH / 2 - PADDLE_WIDTH / 2, WINDOW_HEIGHT - 20);
 	for (int i = 1; i < 11; i++) {
@@ -188,6 +188,7 @@ void Game::Input() {
 			}
 			else if (state[SDL_SCANCODE_X]) {
 				init = false;
+				gameState = 5;
 				SDL_Quit();
 				exit;
 			}
@@ -209,93 +210,98 @@ void Game::Render() {
 	
 	
 	if (gameState == 1) {
-		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Main.png");
 
 		if (init == false) {
+			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Main.png");
+
 			SDL_DestroyWindow(window);
 			init = true;
 			SDL_Init(SDL_INIT_VIDEO);
 			window = SDL_CreateWindow("Pong Main Menu", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+			if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+				std::cerr << "No png init";
+				SDL_Quit();
+				exit;
+			}
+
+			if (!surface) {
+				std::cerr << "No image";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+			SDL_FreeSurface(surface);
+
+			if (!texture) {
+				std::cerr << "No texture";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+			SDL_RenderPresent(renderer);
+			SDL_Delay(5);
 		}
 
 
-		if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
-			std::cerr << "No png init";
-			SDL_Quit();
-			exit;
-		}
-
-		if (!surface) {
-			std::cerr << "No image";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-		SDL_FreeSurface(surface); 
-
-		if (!texture) {
-			std::cerr << "No texture";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_RenderCopy(renderer, texture, NULL, NULL);
-
-		SDL_RenderPresent(renderer);
-		SDL_Delay(5);
+		
 
 	}
 	else if (gameState == 2) {
-		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Dice.png");
 
 		if (init == false) {
+			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Dice.png");
+
 			SDL_DestroyWindow(window);
 			init = true;
 			SDL_Init(SDL_INIT_VIDEO);
 			window = SDL_CreateWindow("Pong Dice Roll", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+			if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+				std::cerr << "No png init";
+				SDL_Quit();
+				exit;
+			}
+
+			if (!surface) {
+				std::cerr << "No image";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+			SDL_FreeSurface(surface);
+
+			if (!texture) {
+				std::cerr << "No texture";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+			SDL_RenderPresent(renderer);
 		}
 
 
-		if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
-			std::cerr << "No png init";
-			SDL_Quit();
-			exit;
-		}
-
-		if (!surface) {
-			std::cerr << "No image";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-		SDL_FreeSurface(surface);
-
-		if (!texture) {
-			std::cerr << "No texture";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_RenderCopy(renderer, texture, NULL, NULL);
-
-		SDL_RenderPresent(renderer);
-		SDL_Delay(5);
+		
 
 	}
 	else if (gameState == 3) {
@@ -348,47 +354,50 @@ void Game::Render() {
 
 	}
 	else if (gameState == 4) {
-		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/End.png");
 
 		if (init == false) {
+			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/End.png");
+
 			SDL_DestroyWindow(window);
 			init = true;
 			SDL_Init(SDL_INIT_VIDEO);
 			window = SDL_CreateWindow("Pong Game Over", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+			if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+				std::cerr << "No png init";
+				SDL_Quit();
+				exit;
+			}
+
+			if (!surface) {
+				std::cerr << "No image";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+			SDL_FreeSurface(surface);
+
+			if (!texture) {
+				std::cerr << "No texture";
+				SDL_DestroyRenderer(renderer);
+				SDL_DestroyWindow(window);
+				IMG_Quit();
+				SDL_Quit();
+				exit;
+			}
+
+			SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+			SDL_RenderPresent(renderer);
+			SDL_Delay(5);
 		}
 
-		if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
-			std::cerr << "No png init";
-			SDL_Quit();
-			exit;
-		}
-
-		if (!surface) {
-			std::cerr << "No image";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-		SDL_FreeSurface(surface);
-
-		if (!texture) {
-			std::cerr << "No texture";
-			SDL_DestroyRenderer(renderer);
-			SDL_DestroyWindow(window);
-			IMG_Quit();
-			SDL_Quit();
-			exit;
-		}
-
-		SDL_RenderCopy(renderer, texture, NULL, NULL);
-
-		SDL_RenderPresent(renderer);
-		SDL_Delay(5);
+		
 
 	}
 	
