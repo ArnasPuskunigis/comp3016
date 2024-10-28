@@ -13,6 +13,7 @@ public:
 	bool init;
 	bool ballsInit;
 	int characterClass;
+	bool characterInit;
 	int die1;
 	int die2;
 
@@ -29,6 +30,7 @@ private:
 	Brick* brick;
 	Brick bricks[10];
 	Ball balls[11];
+	Paddle* paddles[1];
 	int diceValue;
 	int ballCount;
 	// Game states: 1 = Main | 2 = Class select | 3 = Dice roll | 4 = Level 1 | 5 = Level complete | 6 = Level 2 |

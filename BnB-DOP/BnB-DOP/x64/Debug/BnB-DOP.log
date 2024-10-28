@@ -1,13 +1,26 @@
-﻿  Game.cpp
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(157,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(193,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(226,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(235,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(247,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(274,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(283,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(295,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(370,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(379,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(391,5): warning C4551: function call missing argument list
+﻿  Ball.cpp
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(15,3): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(23,3): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(29,3): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(46,4): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(54,4): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(62,4): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(70,4): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(78,3): warning C4551: function call missing argument list
+  BnB-DOP.cpp
+  Brick.cpp
+  Game.cpp
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(158,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(194,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(227,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(236,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(248,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(275,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(284,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(296,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(371,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(380,5): warning C4551: function call missing argument list
+C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(392,5): warning C4551: function call missing argument list
+  Paddle.cpp
+  Generating Code...
   BnB-DOP.vcxproj -> C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe

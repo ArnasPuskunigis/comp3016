@@ -7,6 +7,7 @@
 
 Game::Game() {
 	gameState = 1;
+	characterClass = 0;
 	init = false;
 	ballsInit = false;
 	/*if (gameState == 1) {
