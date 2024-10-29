@@ -28,11 +28,14 @@ private:
 	Ball* ball;
 	Ball* ball2;
 	Brick* brick;
-	Brick bricks[10];
-	Ball balls[11];
-	Paddle* paddles[1];
+	Brick bricks[11];
+	Ball balls[12];
+	Paddle paddles[2];
+	int paddleWidth;
 	int diceValue;
+	int paddleSpeed;
 	int ballCount;
+	int brickCount;
 	// Game states: 1 = Main | 2 = Class select | 3 = Dice roll | 4 = Level 1 | 5 = Level complete | 6 = Level 2 |
 	int gameState;
 	
