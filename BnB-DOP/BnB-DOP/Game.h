@@ -31,6 +31,7 @@ private:
 	Brick bricks[11];
 	Ball balls[12];
 	Paddle paddles[2];
+	bool fileInit;
 	int paddleWidth;
 	int diceValue;
 	int paddleSpeed;

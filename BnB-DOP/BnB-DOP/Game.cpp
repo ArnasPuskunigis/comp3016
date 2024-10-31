@@ -4,6 +4,8 @@
 #include <iostream>
 #include <random>
 #include <SDL_image.h>
+#include <fstream>
+#include <string>
 
 Game::Game() {
 	gameState = 1;
@@ -11,9 +13,10 @@ Game::Game() {
 	init = false;
 	ballsInit = false;
 	paddleWidth = PADDLE_WIDTH * 1;
-	brickCount = 10;
 	brickCount = 0;
+	fileInit = false;
 	paddleSpeed = PADDLE_SPEED * 1;
+
 
 	/*if (gameState == 1) {
 		init = true;
@@ -79,6 +82,37 @@ void Game::Run() {
 
 	while (true) {
 		Input();
+
+		if (gameState == 1) {
+			if (fileInit == false) {
+				std::ifstream file("C:/Users/Arnas/GIT/comp3016/level1.txt");
+				std::string line;
+				while (std::getline(file, line)) {  // Read the file line by line
+					std::cout << line << std::endl;  // Output each line
+				}
+				file.close();  // Close the file
+				fileInit = true;
+				int stringCounter = 0;
+
+				if (line.size() >= 60) {
+					for (int i = 1; i < 5; i++) {
+						for (int j = 1; j < 17; j++) {
+							if (line[stringCounter] == 'X') {
+
+								bricks[stringCounter + 1] = Brick((j * BRICK_WIDTH), i * 40, 2, false);
+								brickCount++;
+							}
+							stringCounter++;
+						}
+					}
+					std::cout << brickCount;
+				}
+				else {
+					std::cout << "not enough";
+				}
+			}
+
+		}
 
 		if (gameState == 3) {
 			if (ballsInit == false) {
@@ -280,7 +314,7 @@ void Game::Render() {
 	if (gameState == 1) {
 
 		if (init == false) {
-			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Main.png");
+			SDL_Surface* surface = IMG_Load("C:/Users/Arnas/GIT/comp3016/Bnb.png");
 
 			SDL_DestroyWindow(window);
 			init = true;
@@ -328,7 +362,7 @@ void Game::Render() {
 	else if (gameState == 2) {
 
 		if (init == false) {
-			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Dice.png");
+			SDL_Surface* surface = IMG_Load("C:/Users/Arnas/GIT/comp3016/bnbDice.png");
 
 			SDL_DestroyWindow(window);
 			init = true;
@@ -429,7 +463,7 @@ void Game::Render() {
 	else if (gameState == 4) {
 
 		if (init == false) {
-			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/End.png");
+			SDL_Surface* surface = IMG_Load("C:/Users/Arnas/GIT/comp3016/bnbLose.png");
 
 			SDL_DestroyWindow(window);
 			init = true;
@@ -476,7 +510,7 @@ void Game::Render() {
 	else if (gameState == 5) {
 
 	if (init == false) {
-		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Win.png");
+		SDL_Surface* surface = IMG_Load("C:/Users/Arnas/GIT/comp3016/bnbWin.png");
 
 		SDL_DestroyWindow(window);
 		init = true;
