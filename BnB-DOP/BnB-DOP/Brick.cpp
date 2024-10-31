@@ -1,4 +1,5 @@
 #include "Brick.h"
+#include <iostream>
 
 void Brick::TakeDamage() {
 
@@ -6,6 +7,7 @@ void Brick::TakeDamage() {
 		health--;
 		if (health == 0) {
 			destroyed = true;
+			std::cout << "destroyed \n";
 		}
 	}
 };

@@ -1,16 +1,16 @@
 #include "Paddle.h"
 
-void Paddle::MoveLeft() {
+void Paddle::MoveLeft(int speed) {
 
 	if (x > 0)
-		x -= PADDLE_SPEED;
+		x -= speed;
 
 };
 
-void Paddle::MoveRight() {
+void Paddle::MoveRight(int speed) {
 
-	if (x < WINDOW_WIDTH - PADDLE_SPEED)
-		x += PADDLE_SPEED;
+	if (x < WINDOW_WIDTH - speed)
+		x += speed;
 
 };
 
