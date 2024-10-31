@@ -1,26 +1,32 @@
 ﻿  Game.cpp
-<<<<<<< HEAD
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(189,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(196,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(205,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(215,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(225,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(238,5): warning C4551: function call missing argument list
-  BnB-DOP.vcxproj -> C:\Users\Arnas\GIT\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe
-=======
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(203,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(261,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(294,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(303,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(315,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(342,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(351,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(363,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(443,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(452,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(464,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(490,4): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(499,4): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(511,4): warning C4551: function call missing argument list
-  BnB-DOP.vcxproj -> C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe
->>>>>>> aa28cadb3c870c56d1763aaadeac803e743edd00
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(245,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(303,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(342,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(351,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(363,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(390,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(399,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(411,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(477,1): error C2059: syntax error: '<<'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(478,27): error C2143: syntax error: missing ';' before '{'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(481,1): error C2059: syntax error: '=='
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(482,27): error C2143: syntax error: missing ';' before '{'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(483,1): error C2059: syntax error: '>>'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(485,22): error C2143: syntax error: missing ';' before '{'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(497,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(500,1): error C2059: syntax error: '<<'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(507,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(517,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(521,1): error C2059: syntax error: '=='
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(523,18): error C2143: syntax error: missing ';' before '{'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(529,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(541,5): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(553,2): error C2181: illegal else without matching if
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(555,1): error C2059: syntax error: '<<'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(561,1): error C2059: syntax error: '=='
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(562,21): error C2143: syntax error: missing ';' before '{'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(574,4): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(579,1): error C2059: syntax error: '>>'
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(584,4): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(596,4): warning C4551: function call missing argument list
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(325,21): error C1075: '{': no matching token found
