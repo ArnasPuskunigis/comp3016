@@ -4,8 +4,6 @@
 #include <iostream>
 #include <random>
 #include <SDL_image.h>
-#include <fstream>
-#include <string>
 
 Game::Game() {
 	gameState = 1;
@@ -13,8 +11,8 @@ Game::Game() {
 	init = false;
 	ballsInit = false;
 	paddleWidth = PADDLE_WIDTH * 1;
+	brickCount = 10;
 	brickCount = 0;
-	fileInit = false;
 	paddleSpeed = PADDLE_SPEED * 1;
 
 	/*if (gameState == 1) {
@@ -42,11 +40,9 @@ Game::Game() {
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	}*/
 
-	//for (int i = 1; i < 11; i++) {
-	//	bricks[i - 1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
-	//}
-
-
+	for (int i = 1; i < 11; i++) {
+		bricks[i - 1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
+	}
 
 	//brick = new Brick(WINDOW_WIDTH / 2 - BRICK_WIDTH / 2, 100, 1, false);
 	
@@ -83,44 +79,6 @@ void Game::Run() {
 
 	while (true) {
 		Input();
-
-		if (gameState == 1) {
-
-			if (fileInit == false) {
-				std::ifstream file("C:/Users/Arnas/GIT/comp3016/BnB - DOP/level1.txt");
-
-				std::string line;
-				while (std::getline(file, line)) {  // Read the file line by line
-					std::cout << line << std::endl;  // Output each line
-				}
-
-				file.close();  // Close the file
-
-				fileInit = true;
-
-				int stringCounter = 0;
-
-				for (int i = 1; i < 11; i++) {
-					bricks[i - 1] = Brick((i * BRICK_WIDTH) + 20, i * 20, 2, false);
-				}
-
-
-				for (int i = 1; i < 5; i++) {
-
-					for (int j = 1; j < 17; j++) {
-						if (line[stringCounter] == 'X') {
-						
-							bricks[stringCounter] = Brick((j * BRICK_WIDTH), i * 20, 2, false);
-
-						}
-						stringCounter++;
-					}
-
-				}
-
-			}
-			
-		}
 
 		if (gameState == 3) {
 			if (ballsInit == false) {
@@ -303,12 +261,6 @@ void Game::Input() {
 				exit;
 			}
 		}
-		else if (gameState == 2) {
-			if (state[SDL_SCANCODE_X]) {
-				SDL_Quit();
-				exit(0);
-			}
-		}
 
 	}
 };
@@ -476,15 +428,14 @@ void Game::Render() {
 	}
 	else if (gameState == 4) {
 
-			if (init == false) {
-				SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/End.png");
+		if (init == false) {
+			SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/End.png");
 
-				SDL_DestroyWindow(window);
-				init = true;
-				SDL_Init(SDL_INIT_VIDEO);
-				window = SDL_CreateWindow("Pong Game Over", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
-				renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-			}
+			SDL_DestroyWindow(window);
+			init = true;
+			SDL_Init(SDL_INIT_VIDEO);
+			window = SDL_CreateWindow("Pong Game Over", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 			if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
 				std::cerr << "No png init";
@@ -492,26 +443,6 @@ void Game::Render() {
 				exit;
 			}
 
-			// Create a window
-			SDL_Window* window = SDL_CreateWindow("Main Menu", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH, WINDOW_HEIGHT, 0);
-			if (!window) {
-				std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
-				IMG_Quit();
-				SDL_Quit();
-				exit;
-			}
-
-			// Create a renderer
-			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-			if (!renderer) {
-				std::cerr << "Renderer could not be created! SDL_Error: " << SDL_GetError() << std::endl;
-				SDL_DestroyWindow(window);
-				IMG_Quit();
-				SDL_Quit();
-				exit;
-			}
-
-			// Load an image from the specified path
 			if (!surface) {
 				std::cerr << "No image";
 				SDL_DestroyRenderer(renderer);
@@ -537,14 +468,13 @@ void Game::Render() {
 
 			SDL_RenderPresent(renderer);
 			SDL_Delay(5);
+		}
+
+		
+
 	}
 	else if (gameState == 5) {
 
-			/*SDL_RenderPresent(renderer);
-			SDL_Delay(5);*/
-
-			// Clean up
-			SDL_DestroyTexture(texture);
 	if (init == false) {
 		SDL_Surface* surface = IMG_Load("C:/Users/apuskunigis/Downloads/Win.png");
 
