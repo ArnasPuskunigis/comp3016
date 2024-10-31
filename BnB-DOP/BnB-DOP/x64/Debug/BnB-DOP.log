@@ -1,15 +1,4 @@
-﻿  Ball.cpp
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(23,4): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(30,4): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(36,4): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(53,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(61,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(69,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(77,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(82,5): warning C4551: function call missing argument list
-C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Ball.cpp(91,4): warning C4551: function call missing argument list
-  Brick.cpp
-  Game.cpp
+﻿  Game.cpp
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(203,5): warning C4551: function call missing argument list
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(261,5): warning C4551: function call missing argument list
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(294,5): warning C4551: function call missing argument list
@@ -24,5 +13,4 @@ C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(464,5): warning C
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(490,4): warning C4551: function call missing argument list
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(499,4): warning C4551: function call missing argument list
 C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\BnB-DOP\Game.cpp(511,4): warning C4551: function call missing argument list
-  Generating Code...
   BnB-DOP.vcxproj -> C:\Users\apuskunigis\Desktop\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe

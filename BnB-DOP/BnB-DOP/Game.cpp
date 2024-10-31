@@ -108,7 +108,7 @@ void Game::Run() {
 				SDL_Quit();
 			};
 
-			if (GetActiveBricks(bricks, brickCount) == 1) {
+			if (GetActiveBricks(bricks, brickCount) == 0) {
 				gameState = 5;
 				init = false;
 				SDL_Quit();
