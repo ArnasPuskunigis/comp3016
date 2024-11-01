@@ -7,7 +7,6 @@ void Brick::TakeDamage() {
 		health--;
 		if (health == 0) {
 			destroyed = true;
-			std::cout << "destroyed \n";
 		}
 	}
 };

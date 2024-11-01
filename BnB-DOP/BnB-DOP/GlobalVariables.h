@@ -1,7 +1,7 @@
 #pragma once
 
 const int WINDOW_WIDTH = 800;
-const int WINDOW_HEIGHT = 600;
+const int WINDOW_HEIGHT = 800;
 const int PADDLE_WIDTH = 100;
 const int PADDLE_HEIGHT = 10;
 const int BALL_SIZE = 10;

@@ -11,12 +11,8 @@
       "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Ball.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\GlobalVariables.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\GlobalVariables.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Brick.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,8 +23,12 @@
       "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Paddle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\GlobalVariables.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\GlobalVariables.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|solutionrelative:BnB-DOP\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7291673-E296-415E-8BB0-5E2893D43E23}|BnB-DOP\\BnB-DOP.vcxproj|C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Ball.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -60,22 +60,23 @@
               "RelativeDocumentMoniker": "BnB-DOP\\Ball.cpp",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Ball.cpp",
               "RelativeToolTip": "BnB-DOP\\Ball.cpp",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEIAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAACYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-12T22:03:57.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Brick.cpp",
               "DocumentMoniker": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Brick.cpp",
               "RelativeDocumentMoniker": "BnB-DOP\\Brick.cpp",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Brick.cpp",
               "RelativeToolTip": "BnB-DOP\\Brick.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-12T22:03:41.776Z"
+              "WhenOpened": "2024-10-12T22:03:41.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -85,14 +86,14 @@
               "RelativeDocumentMoniker": "BnB-DOP\\Game.cpp",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Game.cpp",
               "RelativeToolTip": "BnB-DOP\\Game.cpp",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAF0AAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-12T22:03:01.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Paddle.cpp",
               "DocumentMoniker": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Paddle.cpp",
               "RelativeDocumentMoniker": "BnB-DOP\\Paddle.cpp",
@@ -100,24 +101,25 @@
               "RelativeToolTip": "BnB-DOP\\Paddle.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-12T22:02:36.261Z"
+              "WhenOpened": "2024-10-12T22:02:36.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GlobalVariables.h",
               "DocumentMoniker": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\GlobalVariables.h",
               "RelativeDocumentMoniker": "BnB-DOP\\GlobalVariables.h",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\GlobalVariables.h",
               "RelativeToolTip": "BnB-DOP\\GlobalVariables.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-12T21:55:37.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Paddle.h",
               "DocumentMoniker": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Paddle.h",
               "RelativeDocumentMoniker": "BnB-DOP\\Paddle.h",
@@ -125,17 +127,18 @@
               "RelativeToolTip": "BnB-DOP\\Paddle.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-12T21:55:25.187Z"
+              "WhenOpened": "2024-10-12T21:55:25.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Game.h",
               "RelativeDocumentMoniker": "BnB-DOP\\Game.h",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Game.h",
               "RelativeToolTip": "BnB-DOP\\Game.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-12T21:55:14.714Z",
               "EditorCaption": ""
@@ -148,9 +151,10 @@
               "RelativeDocumentMoniker": "BnB-DOP\\Brick.h",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Brick.h",
               "RelativeToolTip": "BnB-DOP\\Brick.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-12T21:55:04.318Z"
+              "WhenOpened": "2024-10-12T21:55:04.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -160,9 +164,10 @@
               "RelativeDocumentMoniker": "BnB-DOP\\Ball.h",
               "ToolTip": "C:\\Users\\Arnas\\GIT\\comp3016\\BnB-DOP\\BnB-DOP\\Ball.h",
               "RelativeToolTip": "BnB-DOP\\Ball.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-12T21:54:12.77Z"
+              "WhenOpened": "2024-10-12T21:54:12.77Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -174,7 +179,8 @@
               "RelativeToolTip": "BnB-DOP\\BnB-DOP.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-12T21:53:04.967Z"
+              "WhenOpened": "2024-10-12T21:53:04.967Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -19,5 +19,5 @@ private:
 	int y;
 	int velX;
 	int velY;
-	bool destroyed;
+	bool destroyed = true;
 };

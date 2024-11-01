@@ -28,9 +28,10 @@ private:
 	Ball* ball;
 	Ball* ball2;
 	Brick* brick;
-	Brick bricks[11];
+	Brick bricks[64];
 	Ball balls[12];
 	Paddle paddles[2];
+	int level;
 	bool fileInit;
 	int paddleWidth;
 	int diceValue;

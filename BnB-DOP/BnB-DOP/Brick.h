@@ -17,9 +17,9 @@ public:
 	void setDestroyed(bool destroyIn) { destroyed = destroyIn; }
 
 private:
-	int x;
-	int y;
+	int x = -100;
+	int y = -100;
 	int health;
-	bool destroyed;
+	bool destroyed = true;
 };
 

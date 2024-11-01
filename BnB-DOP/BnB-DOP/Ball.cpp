@@ -18,20 +18,19 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 	if (affectSpeed) {
 
 		//Ceiling bounce
-		if (y <= 0) {
+		if (y <= 10) {
 			velY = -velY;
 			exit;
 		}
 
-		//Floor bouce/game over
-		if (y >= WINDOW_HEIGHT - BALL_SIZE) {
-			velY = -velY;
+		//Floor collision/game over
+		if (y >= (WINDOW_HEIGHT - 200) - BALL_SIZE) {
 			destroyBall();
 			exit;
 		}
 
 		//wall bounce
-		if (x <= 0 || x >= WINDOW_WIDTH - BALL_SIZE) {
+		if (x <= 0 + 10 || x >= (WINDOW_WIDTH - BALL_SIZE) - 10) {
 			velX = -velX;
 			exit;
 		}
@@ -40,7 +39,7 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 		int tempBrickY;
 		bool brickDestroyed;
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 64; i++) {
 			tempBrickX = allBricks[i].getX();
 			tempBrickY = allBricks[i].getY();
 			brickDestroyed = allBricks[i].getDestroyed();
@@ -77,7 +76,7 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 				exit;
 			}
 
-			if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0) {
+			if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0 && y <= paddleY + PADDLE_HEIGHT) {
 				velY = -velY;
 				exit;
 			}
@@ -86,7 +85,7 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 	}
 	else {
 
-		if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0) {
+		if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0 && y <= paddleY + PADDLE_HEIGHT) {
 			velY = -velY;
 			exit;
 		}
