@@ -9,8 +9,10 @@ public:
 	Ball(int x, int y, int velX, int velY, bool destroyed) : x(x), y(y), velX(velX), velY(velY), destroyed(destroyed) {};
 	Ball() = default;
 	void update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, bool affectSpeed, bool doubleSpeed);
+	//Getters
 	int getX() { return x; }
 	int getY() { return y; }
+	//Setters
 	bool getDestroyed() { return destroyed; }
 	void destroyBall() { destroyed = true; }
 

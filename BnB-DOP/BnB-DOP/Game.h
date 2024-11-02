@@ -22,23 +22,20 @@ private:
 	void GenerateBalls();
 	void Input();
 	void Render();
+	void DrawDice(bool isLeft, int diceNumber);
 	SDL_Window* window;
 	SDL_Renderer* renderer;
-	Paddle* paddle;
-	Ball* ball;
-	Ball* ball2;
-	Brick* brick;
 	Brick bricks[64];
 	Ball balls[12];
 	Paddle paddles[2];
 	int level;
+	bool rollingDie;
 	bool fileInit;
 	int paddleWidth;
 	int diceValue;
 	int paddleSpeed;
 	int ballCount;
 	int brickCount;
-	// Game states: 1 = Main | 2 = Class select | 3 = Dice roll | 4 = Level 1 | 5 = Level complete | 6 = Level 2 |
 	int gameState;
 	
 };

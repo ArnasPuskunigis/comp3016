@@ -15,6 +15,7 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 		}
 	}
 
+	//Check for if this should increase the speed of the ball (character specific issue)
 	if (affectSpeed) {
 
 		//Ceiling bounce
@@ -38,44 +39,50 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 		int tempBrickX;
 		int tempBrickY;
 		bool brickDestroyed;
+		bool interacted = false;
 
 		for (int i = 0; i < 64; i++) {
-			tempBrickX = allBricks[i].getX();
-			tempBrickY = allBricks[i].getY();
-			brickDestroyed = allBricks[i].getDestroyed();
+			
+			if (!interacted) {
+				tempBrickX = allBricks[i].getX();
+				tempBrickY = allBricks[i].getY();
+				brickDestroyed = allBricks[i].getDestroyed();
 
-			//brick bounce (bottom part)
-			if (y <= tempBrickY + BRICK_HEIGHT && y >= tempBrickY + BRICK_HEIGHT - 1 && x >= tempBrickX - BALL_SIZE && x <= ((tempBrickX + BRICK_WIDTH) - 1) + BALL_SIZE && brickDestroyed == false) {
-				//brick to take damage
-				velY = -velY;
-				allBricks[i].TakeDamage();
-				exit;
+				//brick bounce (bottom part)
+				if (y <= tempBrickY + BRICK_HEIGHT && y >= tempBrickY + BRICK_HEIGHT - 1 && x >= tempBrickX - BALL_SIZE && x <= ((tempBrickX + BRICK_WIDTH) - 1) + BALL_SIZE && brickDestroyed == false) {
+					//brick to take damage
+					velY = -velY;
+					allBricks[i].TakeDamage();
+					interacted = true;
+					exit;
+				}
+				//brick bounce (top part)
+				else if (y <= tempBrickY + 1 && y >= tempBrickY - BALL_SIZE && x >= tempBrickX + 1 && x <= ((tempBrickX + BRICK_WIDTH) - 1) + BALL_SIZE && brickDestroyed == false) {
+					//brick to take damage
+					velY = -velY;
+					allBricks[i].TakeDamage();
+					interacted = true;
+					exit;
+				}
+				//brick bounce (left part)
+				else if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX - BALL_SIZE && x <= tempBrickX + BRICK_WIDTH / 2 && brickDestroyed == false && velX >= 0) {
+					//brick to take damage
+					velX = -velX;
+					allBricks[i].TakeDamage();
+					interacted = true;
+					exit;
+				}
+				//brick bounce (right part)
+				else if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX + BRICK_WIDTH / 2 && x <= tempBrickX + BRICK_WIDTH && brickDestroyed == false && velX <= 0) {
+					//brick to take damage
+					velX = -velX;
+					allBricks[i].TakeDamage();
+					interacted = true;
+					exit;
+				}
 			}
 
-			//brick bounce (top part)
-			if (y <= tempBrickY + 1 && y >= tempBrickY - BALL_SIZE && x >= tempBrickX + 1 && x <= ((tempBrickX + BRICK_WIDTH) - 1) + BALL_SIZE && brickDestroyed == false) {
-				//brick to take damage
-				velY = -velY;
-				allBricks[i].TakeDamage();
-				exit;
-			}
-
-			//brick bounce (left part)
-			if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX - BALL_SIZE && x <= tempBrickX + BRICK_WIDTH / 2 && brickDestroyed == false && velX >= 0) {
-				//brick to take damage
-				velX = -velX;
-				allBricks[i].TakeDamage();
-				exit;
-			}
-
-			//brick bounce (right part)
-			if (y <= tempBrickY + BRICK_HEIGHT - 1 && y >= tempBrickY + 1 && x >= tempBrickX + BRICK_WIDTH / 2 && x <= tempBrickX + BRICK_WIDTH && brickDestroyed == false && velX <= 0) {
-				//brick to take damage
-				velX = -velX;
-				allBricks[i].TakeDamage();
-				exit;
-			}
-
+			//Ball bounce off paddle
 			if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0 && y <= paddleY + PADDLE_HEIGHT) {
 				velY = -velY;
 				exit;
@@ -84,28 +91,11 @@ void Ball::update(int paddleX, int paddleY, Brick allBricks[], int paddleWidth, 
 		};
 	}
 	else {
-
+		//Ball bounce off paddle
 		if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + paddleWidth && velY >= 0 && y <= paddleY + PADDLE_HEIGHT) {
 			velY = -velY;
 			exit;
 		}
 	}
-
-
-
-
-	////paddle bounce
-	//if (y >= (WINDOW_HEIGHT - (WINDOW_HEIGHT - paddleY)) - BALL_SIZE && x >= paddleX && x <= paddleX + PADDLE_WIDTH) {
-	//	velY = -velY;
-	//	exit;
-	//}
-
-	//if (x <= PADDLE_WIDTH && y >= leftY && y <= leftY + PADDLE_HEIGHT) {
-	//	velX = BALL_SPEED;
-	//}
-
-	//if (x >= WINDOW_WIDTH - PADDLE_WIDTH - BALL_SIZE && y >= rightY && y <= rightY + PADDLE_HEIGHT) {
-	//	velX = -BALL_SPEED;
-	//}
 
 };
