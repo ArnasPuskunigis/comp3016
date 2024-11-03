@@ -34,9 +34,11 @@ Game loop
 ### Character Selection Screen
 ![Character Select Screen](/BnB-DOP/Game/assets/ChooseCharacterScreen.png)
 
-### Dice Screen
+### Title Screen
+![Title Screen](/BnB-DOP/Game/assets/StartScreen.png)
 
 ### Game Over Screen
+![Game Over Screen](/BnB-DOP/Game/assets/GameOverScreen.png)
 
 ##Exeption handling
 
