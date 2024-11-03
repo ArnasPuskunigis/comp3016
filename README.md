@@ -10,12 +10,18 @@
 
 ## Game mechanics
 
-Class Selection
-Dice roll
+### Class Selection
+In the character selection screen, the player has the option between 3 classes and each class has its own unique change.
+This allows the player to explore different playing styles to find their preffered style.
+
+### Dice roll
+After choosing their character, 2 dice are rolled on the screen, the results of the dice roll dictate the number of balls or _breakers_, that are spawned at the start of the level.
+
 
 ## Game controls
 
 __A__ - Move paddle left
+
 __D__ - Move paddle right
 
 Other keyboard controls for navigating menus are displayed within the in-game UI
@@ -27,9 +33,15 @@ SDL2Image: https://www.libsdl.org/projects/SDL_image/release/
 
 ## Patterns
 
-Game loop
+A game loop is used for running the game.
 
-##Sample screens
+Within each frame, the following occurs:
+
+- Input gathered
+- The game logic executed based on inputs and game states
+- The game is rendered based on game states and inputs
+
+## Sample screens
 
 ### Character Selection Screen
 ![Character Select Screen](/BnB-DOP/Game/assets/ChooseCharacterScreen.png)
