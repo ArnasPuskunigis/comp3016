@@ -9,5 +9,6 @@ int main(int argc, char* argv[])
 {
     Game game;
     game.Run();
+    exit;
     return 0;
 }

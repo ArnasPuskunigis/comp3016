@@ -1,21 +1,4 @@
-﻿  Game.cpp
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(252,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(283,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(336,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(361,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(399,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(408,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(420,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(442,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(451,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(463,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(489,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(498,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(510,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(659,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(668,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(680,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(704,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(713,5): warning C4551: function call missing argument list
-C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\Game.cpp(725,5): warning C4551: function call missing argument list
+﻿  BnB-DOP.cpp
+C:\Users\Arnas\GIT\comp3016\BnB-DOP\BnB-DOP\BnB-DOP.cpp(12,5): warning C4551: function call missing argument list
+  LINK : C:\Users\Arnas\GIT\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe not found or not built by the last incremental link; performing full link
   BnB-DOP.vcxproj -> C:\Users\Arnas\GIT\comp3016\BnB-DOP\x64\Debug\BnB-DOP.exe

@@ -64,7 +64,7 @@ void Game::Run() {
 				std::string line;
 
 				if (level == 1) {
-					std::ifstream file("assets/level7.txt");
+					std::ifstream file("assets/level1.txt");
 					while (std::getline(file, line)) { 
 					}
 					file.close(); 
@@ -295,6 +295,7 @@ void Game::Input() {
 				gameState = 4;
 				init = false;
 				SDL_Quit();
+				exit(0);
 			}
 			else {
 			
