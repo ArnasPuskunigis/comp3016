@@ -65,11 +65,11 @@ Within each frame, the following occurs:
 ### Game Over Screen
 ![Game Over Screen](/BnB-DOP/Game/assets/GameOverScreen.png)
 
-##Exeption handling
+## Exeption handling
 
 - Error checks regarding texture loading are implemented throughout the code, informative error messages are displayed in the console which runs alongside the game.
 
-##Evaluation
+## Evaluation
 
 I think that I have developed a great game which demonstrates my ability to write unmanaged code within the object-oriented paradigm.
 I especially enjoyed the freedom of designing my own game while having strict deadlines, this forced me to design and develop efficiently where I have learnt of ways in which I could improve further.
