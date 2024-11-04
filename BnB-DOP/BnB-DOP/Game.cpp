@@ -106,7 +106,6 @@ void Game::Run() {
 					file.close();
 				}
 				
-				
 				fileInit = true;
 				int stringCounter = 0;
 
@@ -788,7 +787,7 @@ void Game::Render() {
 
 			SDL_RenderPresent(renderer);
 		}
-		}
+	}
 
 }
 
